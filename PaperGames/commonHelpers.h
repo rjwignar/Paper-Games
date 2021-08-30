@@ -3,7 +3,8 @@
 
 namespace project
 {
-
+	int getInt(const char* prompt);
+	int getInt(int min, int max, const char* prompt, const char* errorMessage, bool showRangeAtError);
 }
 
 #endif // !PRJ_COMMONHELPERS_H_
