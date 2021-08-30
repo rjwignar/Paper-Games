@@ -2,5 +2,9 @@
 
 namespace project
 {
+	Game::~Game()
+	{
+		;
+	}
 
 }

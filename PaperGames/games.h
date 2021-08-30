@@ -1,9 +1,13 @@
 #ifndef PRJ_GAMES_H_
 #define PRJ_GAMES_H_
-
+#include <iostream>
 namespace project
 {
-
+	class Game
+	{
+	public:
+		virtual ~Game();
+	};
 }
 
-#endif // !RJW_GAMES_H_
+#endif // !PRJ_GAMES_H_
