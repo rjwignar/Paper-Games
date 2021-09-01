@@ -1,4 +1,4 @@
-# Doodle Suite
+# Pen & Paper Games Suite
 The purpose of this project is to recreate various pen-and-paper games using C++ to practice implementing the key C++ concepts: 
 - Encapsulation (via class construction)
 - Inheritance (via a class hierarchy)
