@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS //remove later
 #include "paperGames.h"
 
 namespace project
@@ -13,6 +14,7 @@ namespace project
 	PaperGame::PaperGame(const char* cstr)
 	{
 		m_title = new char[std::strlen(cstr) + 1];
+		strcpy(m_title, cstr);
 	}
 	PaperGame::~PaperGame()
 	{

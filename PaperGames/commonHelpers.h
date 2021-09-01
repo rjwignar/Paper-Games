@@ -3,7 +3,7 @@
 
 namespace project
 {
-	int getInt(const char* prompt);
+	int getInt(const char* prompt = nullptr);
 	int getInt(int min, int max, const char* prompt, const char* errorMessage, bool showRangeAtError);
 }
 

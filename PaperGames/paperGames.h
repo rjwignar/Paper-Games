@@ -12,7 +12,7 @@ namespace project
 		char* title() const;
 	public:
 		PaperGame();
-		PaperGame(const char* cstr);
+		PaperGame(const char* cstr = nullptr);
 		~PaperGame();
 		PaperGame(const PaperGame& src) = delete;
 		PaperGame& operator=(const PaperGame& src) = delete;
