@@ -10,5 +10,7 @@ int main()
 	//Board Display Testing
 	TicTacToe tictac;
 	cout << tictac;
+	tictac.input();
+	cout << tictac;
 	return 0;
 }
