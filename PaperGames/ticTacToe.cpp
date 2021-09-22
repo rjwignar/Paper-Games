@@ -17,18 +17,6 @@ namespace project
 	}
 	void TicTacToe::drawPieces(std::ostream& os, char left, char middle, char right) const
 	{
-		//os << "  ";
-		//os << left;
-		//os << "  ";
-		//os << "|";
-		//os << "  ";
-		//os << middle;
-		//os << "  ";
-		//os << "|";
-		//os << "  ";
-		//os << right;
-		//os << "  ";
-		//os << endl;
 		//made redundant for now
 	}
 	void TicTacToe::drawUnderLine(std::ostream& os) const
@@ -55,31 +43,56 @@ namespace project
 			os << endl;
 			i < 2 ? drawUnderLine(os) : drawLine(os);
 		}
-		//drawLine(os);
-		//drawPieces(os, pieces[0], pieces[1], pieces[2]);
-		//drawUnderLine(os);
-		//drawLine(os);
-		//drawPieces(os, pieces[3], pieces[4], pieces[5]);
-		//drawUnderLine(os);
-		//drawLine(os);
-		//drawPieces(os, pieces[6], pieces[7], pieces[8]);
-		//drawLine(os);
 	}
 	void TicTacToe::input()
 	{
-		int selection = 0;
+		int selection = -1;
 		do
 		{
-			selection = getInt(0, 9, "Select a number position to place your piece on: ", nullptr, true);
-			if (pieces[selection / 3][(selection - 1) % 3] != 'X' && pieces[selection / 3][(selection - 1) % 3] != 'O')
-				pieces[selection / 3][(selection - 1) % 3] = this->player;
+			selection = getInt(0, 8, "Select a number position to place your piece on: ", nullptr, true);
+			if (pieces[selection / 3][selection % 3] != 'X' && pieces[selection / 3][selection % 3] != 'O')
+				pieces[selection / 3][selection % 3] = this->player;
 			else
 				cout << "Spot already occupied! Enter a different position: ";
-		} while (selection == 0 || (pieces[selection / 3][(selection - 1) % 3] == 'X' || pieces[selection / 3][(selection - 1) % 3] == 'O'));
+		} while (selection == -1 || (pieces[selection / 3][selection % 3] != this->player));
 		togglePlayer();
 	}
 	void TicTacToe::togglePlayer()
 	{
 		this->player == 'X' ? this->player = 'O' : this->player = 'X';
+	}
+
+	bool TicTacToe::checkWinner()
+	{
+		bool ok = false;
+
+		return ok;
+	}
+	bool TicTacToe::checkDiagonals()
+	{
+		bool ok = false;
+
+		return ok;
+	}
+	bool TicTacToe::checkHorizontals()
+	{
+		bool ok = false;
+		for (int i = 0; i < width && ok == false; i++)
+		{
+			for (int j = 0; j < length; j++)
+			{
+				if (pieces[i][j] != this->player)
+					break;
+				if (j == length - 1)
+					ok = true;
+			}
+		}
+		return ok;
+	}
+	bool TicTacToe::checkVerticals()
+	{
+		bool ok = false;
+
+		return ok;
 	}
 }

@@ -5,8 +5,10 @@ namespace project
 {
 	class TicTacToe :public PaperGame
 	{
+		int length = 3;
+		int width = 3;
 		//char pieces[9] = { '1', '2', '3','4','5','6','7','8','9' };
-		char pieces[3][3] = { '1', '2', '3','4','5','6','7','8','9' };
+		char pieces[3][3] = { '0', '1', '2','3','4','5','6','7','8' };
 		char player = 'X';
 	public:
 		TicTacToe();
@@ -16,6 +18,11 @@ namespace project
 		void drawUnderLine(std::ostream& os) const;
 		void input();
 		void togglePlayer();
+
+		bool checkWinner();
+		bool checkDiagonals();
+		bool checkHorizontals();
+		bool checkVerticals();
 
 	};
 }

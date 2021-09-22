@@ -12,5 +12,16 @@ int main()
 	cout << tictac;
 	tictac.input();
 	cout << tictac;
+	tictac.input();
+	cout << tictac;
+	tictac.input();
+	cout << tictac;
+	tictac.input();
+	cout << tictac;
+	tictac.input();
+	cout << tictac;
+	tictac.input();
+	cout << tictac;
+	tictac.checkHorizontals();
 	return 0;
 }
