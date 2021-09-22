@@ -77,13 +77,13 @@ namespace project
 	bool TicTacToe::checkHorizontals()
 	{
 		bool ok = false;
-		for (int i = 0; i < width && ok == false; i++)
+		for (int i = 0; i < height && ok == false; i++)
 		{
-			for (int j = 0; j < length; j++)
+			for (int j = 0; j < width; j++)
 			{
 				if (pieces[i][j] != this->player)
 					break;
-				if (j == length - 1)
+				if (j == width - 1)
 					ok = true;
 			}
 		}
@@ -92,7 +92,16 @@ namespace project
 	bool TicTacToe::checkVerticals()
 	{
 		bool ok = false;
-
+		for (int i = 0; i < width && ok == false; i++)
+		{
+			for (int j = 0; j < height; j++)
+			{
+				if (pieces[j][i] != this->player)
+					break;
+				if (j == height - 1)
+					ok = true;
+			}
+		}
 		return ok;
 	}
 }

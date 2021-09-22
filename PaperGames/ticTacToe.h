@@ -5,8 +5,8 @@ namespace project
 {
 	class TicTacToe :public PaperGame
 	{
-		int length = 3;
 		int width = 3;
+		int height = 3;
 		//char pieces[9] = { '1', '2', '3','4','5','6','7','8','9' };
 		char pieces[3][3] = { '0', '1', '2','3','4','5','6','7','8' };
 		char player = 'X';
