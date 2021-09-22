@@ -64,15 +64,12 @@ namespace project
 
 	bool TicTacToe::checkWinner()
 	{
-		bool ok = false;
-
-		return ok;
+		return (checkDiagonals() || checkHorizontals() || checkVerticals());
 	}
 	bool TicTacToe::checkDiagonals()
 	{
-		bool ok = false;
-
-		return ok;
+		return (this->player == pieces[0][0] && this->player == pieces[1][1] && this->player == pieces[2][2])
+			|| (this->player == pieces[0][2] && this->player == pieces[1][1] && this->player == pieces[2][0]);
 	}
 	bool TicTacToe::checkHorizontals()
 	{
